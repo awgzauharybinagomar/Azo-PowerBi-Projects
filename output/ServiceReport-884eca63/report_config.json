@@ -1,0 +1,10 @@
+{
+  "report_name": "ServiceReport-884eca63",
+  "source": "power_bi_service",
+  "workspace_id": "2a77e123-9c0b-47fc-8e78-80961386c3d4",
+  "report_id": "884eca63-6084-4ca8-b375-dd9f9497c23f",
+  "default_page": "ReportSection",
+  "service_url": "https://app.powerbi.com/groups/2a77e123-9c0b-47fc-8e78-80961386c3d4/reports/884eca63-6084-4ca8-b375-dd9f9497c23f/ReportSection?experience=power-bi",
+  "local_pbip": "ServiceReport-884eca63.pbip",
+  "notes": "Taken over from Power BI Service. Open the .pbip in Power BI Desktop, sign in, and publish back to workspace 2a77e123-9c0b-47fc-8e78-80961386c3d4 to sync changes."
+}
