@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Real Dashboard SK. Melikai dipaparkan secara langsung dari Power BI Service" />
+  <title>Real Dashboard SK. Melikai</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Real Dashboard SK. Melikai</h1>
+      <p class="subtitle">Live data from Power BI Service</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="dashboard-wrapper">
+      <div class="iframe-container">
+        <iframe
+          id="powerbi-frame"
+          title="Real Dashboard SK. Melikai"
+          src="https://app.powerbi.com/view?r=eyJrIjoiOTMyNDg3MjQtYTZkZi00ODFjLTk5NjItZWQ3NjEwMzlmYmUxIiwidCI6IjFlNTZmY2U2LWJkYjctNGNkYy1iYTQ3LTRhMTU2NDg0YTg5NCIsImMiOjEwfQ%3D%3D"
+          frameborder="0"
+          allowfullscreen="true"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <div class="info-card">
+        <h3>Workspace</h3>
+        <code>2a77e123-9c0b-47fc-8e78-80961386c3d4</code>
+      </div>
+      <div class="info-card">
+        <h3>Report ID</h3>
+        <code>884eca63-6084-4ca8-b375-dd9f9497c23f</code>
+      </div>
+      <div class="info-card">
+        <h3>Source</h3>
+        <a href="https://app.powerbi.com/groups/2a77e123-9c0b-47fc-8e78-80961386c3d4/reports/884eca63-6084-4ca8-b375-dd9f9497c23f/ReportSection?experience=power-bi" target="_blank" rel="noopener">View in Power BI &#8599;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Powered by Power BI &bull; Auto-refresh from Service</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
