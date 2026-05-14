@@ -1,0 +1,129 @@
+table 'Sheet1 (5)'
+	lineageTag: c88cfce5-9734-4e08-9afc-3e67efdc86ec
+
+	column BIL
+		dataType: int64
+		formatString: 0
+		lineageTag: 810611c5-2e53-4c6a-98c1-9a254c6f291d
+		summarizeBy: none
+		sourceColumn: BIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAMA
+		dataType: string
+		lineageTag: 188cab94-fbd6-4cd8-9c76-193b21c7c8ea
+		summarizeBy: none
+		sourceColumn: NAMA
+
+		annotation SummarizationSetBy = Automatic
+
+	column JANTINA
+		dataType: string
+		lineageTag: 18401584-df9d-409a-b176-72e44029098c
+		summarizeBy: none
+		sourceColumn: JANTINA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NO. KAD PENGENALAN'
+		dataType: string
+		lineageTag: 768c26c7-3cc3-418c-b7d5-ece18c10bbf3
+		summarizeBy: none
+		sourceColumn: NO. KAD PENGENALAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column GRED
+		dataType: string
+		lineageTag: baf8a38b-94de-447b-b69f-8cbe8bff7316
+		summarizeBy: none
+		sourceColumn: GRED
+
+		annotation SummarizationSetBy = Automatic
+
+	column OPSYEN
+		dataType: string
+		lineageTag: 6f84867f-1a4c-4636-a6cc-672f054b6d08
+		summarizeBy: none
+		sourceColumn: OPSYEN
+
+		annotation SummarizationSetBy = Automatic
+
+	column JAWATAN
+		dataType: string
+		lineageTag: 4f8fead3-5d52-43c8-80fc-374341e41bb2
+		summarizeBy: none
+		sourceColumn: JAWATAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TARIKH LAHIR'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: d2a95d8c-9e5a-4e65-8104-1d28f8221d56
+		summarizeBy: none
+		sourceColumn: TARIKH LAHIR
+
+		variation Variation
+			isDefault
+			relationship: 0c1f0fa7-87e9-41fc-b8f6-c3fb584f3cbd
+			defaultHierarchy: LocalDateTable_6bb126ab-6d14-4ea7-918f-0af57e78a303.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'NO. TELEFON'
+		dataType: string
+		lineageTag: c738311a-62de-4e0d-8de8-e2300b453a83
+		summarizeBy: none
+		sourceColumn: NO. TELEFON
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NOMBOR FAIL'
+		dataType: string
+		lineageTag: 7ac06953-03cd-4d32-a785-258ff06debbc
+		summarizeBy: none
+		sourceColumn: NOMBOR FAIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column UMUR
+		dataType: string
+		lineageTag: 68f73f0a-8139-4eb6-bcf1-7d40a1c4e071
+		summarizeBy: none
+		sourceColumn: UMUR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SUBJEK DIAJAR'
+		dataType: string
+		lineageTag: 283440e3-2854-4489-8ab7-361523d3293a
+		summarizeBy: none
+		sourceColumn: SUBJEK DIAJAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: e56c6ca6-1dda-4b76-a27a-507fee62208a
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sheet1 (5)' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\soulr\OneDrive\Documents\POWER BI DOC\Power BI Maklumat Guru.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"BIL", Int64.Type}, {"NAMA", type text}, {"JANTINA", type text}, {"NO. KAD PENGENALAN", type text}, {"GRED", type text}, {"OPSYEN", type text}, {"JAWATAN", type text}, {"TARIKH LAHIR", type date}, {"NO. TELEFON", type text}, {"NOMBOR FAIL", type any}, {"UMUR", type any}, {"SUBJEK DIAJAR", type any}, {"Email", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

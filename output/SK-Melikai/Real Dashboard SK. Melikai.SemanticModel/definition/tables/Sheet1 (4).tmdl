@@ -1,0 +1,31 @@
+table 'Sheet1 (4)'
+	lineageTag: a7e4088d-d764-4d9a-92b3-e2e5871792ea
+
+	column Column1
+		dataType: string
+		lineageTag: e18a8253-5c7a-460a-bf2e-7ca4c30008b6
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: d4cdedf0-c9c4-436f-ae10-1ef52275f6d3
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sheet1 (4)' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\soulr\OneDrive\Documents\Lokasi SK. Melikai.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Sheet1_Sheet,{{"Column1", type text}, {"Column2", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

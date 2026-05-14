@@ -1,0 +1,50 @@
+relationship e28bef53-f85b-45cc-a114-be23305a7776
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Sheet1.'Tarikh Lahir'
+	toColumn: LocalDateTable_14efc27c-3a1d-459d-af31-acf8ce6f03da.Date
+
+relationship c78a5cee-23ed-43a5-825a-593e4b4e4f84
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Sheet1 (2)'.'Tarikh Penubuhan'
+	toColumn: LocalDateTable_90292097-669d-4610-8e0b-e30f3b24fbd4.Date
+
+relationship e717ce17-992b-4916-ad3b-b6b80859b978
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Sheet1 (3)'.'Tarikh Penubuhan'
+	toColumn: LocalDateTable_36706b4a-6445-4d45-859f-47b4accb2e29.Date
+
+relationship a0a507c2-7de4-4421-925f-887c5bfbf227
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Sheet1 (3)'.'Kod Sekolah'
+	toColumn: 'Sheet1 (2)'.'Kod Sekolah'
+
+relationship 0c1f0fa7-87e9-41fc-b8f6-c3fb584f3cbd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Sheet1 (5)'.'TARIKH LAHIR'
+	toColumn: LocalDateTable_6bb126ab-6d14-4ea7-918f-0af57e78a303.Date
+
+relationship 26d4eb51-9b81-4d7b-a9e8-f1e537221b87
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Sheet1 (5)'.BIL
+	toColumn: Sheet1.BIL
+
+relationship 1430e8a1-3c21-43a4-85df-0eab74c1dfe0
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'PELAPORAN PBD (JULAI 2024) (Sheet1)'.'BIL.'
+	toColumn: Sheet1.BIL
+
+relationship bedbdd05-5960-4e4a-bce8-1a98e9042ca0
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'PELAPORAN PBD (JULAI 2024) (Sheet1) (2)'.'BIL.'
+	toColumn: Sheet1.BIL
+
+relationship 4f1d5c30-132d-4a5f-ab7d-162328b30d7c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Sheet1 (6)'.'PELAPORAN PBD (JULAI 2024)'
+	toColumn: 'Sheet1 (7)'.'PELAPORAN PBD (JULAI 2024)'
+

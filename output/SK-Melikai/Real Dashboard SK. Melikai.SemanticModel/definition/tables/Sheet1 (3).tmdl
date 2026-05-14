@@ -1,0 +1,199 @@
+table 'Sheet1 (3)'
+	lineageTag: 2d6be325-f33d-4ad3-acde-f9ce246e4068
+
+	column 'Nama Sekolah'
+		dataType: string
+		lineageTag: 7a5bebf8-3ded-441c-b826-f253a86ab239
+		summarizeBy: none
+		sourceColumn: Nama Sekolah
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Kod Sekolah'
+		dataType: string
+		lineageTag: cead8434-5c38-471a-9f4b-4c951b8102b8
+		summarizeBy: none
+		sourceColumn: Kod Sekolah
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. Telefon'
+		dataType: string
+		lineageTag: b9ffee43-a4f1-4c96-a0f7-6f24496981cd
+		summarizeBy: none
+		sourceColumn: No. Telefon
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: ff991b7d-40cf-4dc3-91a3-d62f1fa80cd6
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sesi
+		dataType: string
+		lineageTag: 3f5b737f-b473-408e-aecc-9b7d28753144
+		summarizeBy: none
+		sourceColumn: Sesi
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gred
+		dataType: string
+		lineageTag: 4b1275d2-1ca9-45a5-af0b-4140a9959b87
+		summarizeBy: none
+		sourceColumn: Gred
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jenis Sekolah'
+		dataType: string
+		lineageTag: 243eda85-ab40-47c3-8a37-ef1cb653999e
+		summarizeBy: none
+		sourceColumn: Jenis Sekolah
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Peringkat Sekolah'
+		dataType: string
+		lineageTag: 8eb40bfe-5b16-46d3-8ead-4a7c98008e9f
+		summarizeBy: none
+		sourceColumn: Peringkat Sekolah
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Status Bangunan'
+		dataType: string
+		lineageTag: 5b75b68d-9f57-405f-9539-21605f9e81ac
+		summarizeBy: none
+		sourceColumn: Status Bangunan
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bil. Optimum Pelajar'
+		dataType: int64
+		formatString: 0
+		lineageTag: 348da2d4-afa4-4f8a-9a79-f88d94871a71
+		summarizeBy: sum
+		sourceColumn: Bil. Optimum Pelajar
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Keluasan Sekolah'
+		dataType: string
+		lineageTag: 3d4d576c-db5b-4fdf-a6c8-0555009e01fd
+		summarizeBy: none
+		sourceColumn: Keluasan Sekolah
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jenis Bantuan'
+		dataType: string
+		lineageTag: d9a07786-8e44-44d0-8428-ce9b14015708
+		summarizeBy: none
+		sourceColumn: Jenis Bantuan
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tarikh Penubuhan'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 613329a5-2bc2-4cc5-9709-3df6e6aec33b
+		summarizeBy: none
+		sourceColumn: Tarikh Penubuhan
+
+		variation Variation
+			isDefault
+			relationship: e717ce17-992b-4916-ad3b-b6b80859b978
+			defaultHierarchy: LocalDateTable_36706b4a-6445-4d45-859f-47b4accb2e29.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Lokasi Sekolah'
+		dataType: string
+		lineageTag: 7ae74dde-6c7c-4319-8c9e-e3125967fe1a
+		summarizeBy: none
+		sourceColumn: Lokasi Sekolah
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bil. Kelas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 959c5a23-3816-4e78-a331-5b25ac06a047
+		summarizeBy: sum
+		sourceColumn: Bil. Kelas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bilangan Murid'
+		dataType: int64
+		formatString: 0
+		lineageTag: f7382e40-7c78-4888-8cb1-3253c77a89c6
+		summarizeBy: sum
+		sourceColumn: Bilangan Murid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bil. Murid Prasekolah'
+		dataType: int64
+		formatString: 0
+		lineageTag: f1d2e114-b583-4785-b905-171647684018
+		summarizeBy: sum
+		sourceColumn: Bil. Murid Prasekolah
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Alamat Sekolah'
+		dataType: string
+		lineageTag: 5fc8a0f4-c130-463f-becc-477fe486b060
+		summarizeBy: none
+		sourceColumn: Alamat Sekolah
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bilangan Guru'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e4e37ff-2ec6-49df-a3ec-7ee9a67cb98b
+		summarizeBy: sum
+		sourceColumn: Bilangan Guru
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bilangan Bukan Guru'
+		dataType: int64
+		formatString: 0
+		lineageTag: 422506f9-7f91-4f84-b428-d6bf4612f057
+		summarizeBy: sum
+		sourceColumn: Bilangan Bukan Guru
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jarak Dari PPD'
+		dataType: int64
+		formatString: 0
+		lineageTag: cec5e908-14db-49a0-b41a-b53073123ebf
+		summarizeBy: sum
+		sourceColumn: Jarak Dari PPD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sheet1 (3)' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\soulr\OneDrive\Documents\Maklumat Asas Sekolah Power BI.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Nama Sekolah", type text}, {"Kod Sekolah", type text}, {"No. Telefon", type text}, {"Email", type text}, {"Sesi", type text}, {"Gred", type text}, {"Jenis Sekolah", type text}, {"Peringkat Sekolah", type text}, {"Status Bangunan", type text}, {"Bil. Optimum Pelajar", Int64.Type}, {"Keluasan Sekolah", type text}, {"Jenis Bantuan", type text}, {"Tarikh Penubuhan", type date}, {"Lokasi Sekolah", type text}, {"Bil. Kelas", Int64.Type}, {"Bilangan Murid", Int64.Type}, {"Bil. Murid Prasekolah", Int64.Type}, {"Alamat Sekolah", type text}, {"Bilangan Guru", Int64.Type}, {"Bilangan Bukan Guru", Int64.Type}, {"Jarak Dari PPD", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,399 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "95195faf7b2bb0179c12",
+  "position": {
+    "x": 452.44518828451885,
+    "y": 64.439163179916321,
+    "z": 2000,
+    "height": 592.2918828451883,
+    "width": 797.94878661087864,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "NAMA"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).NAMA",
+              "nativeQueryRef": "NAMA"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "BM"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).BM",
+              "nativeQueryRef": "BM"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "BI"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).BI",
+              "nativeQueryRef": "BI"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "MT"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).MT",
+              "nativeQueryRef": "MT"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "SN"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).SN",
+              "nativeQueryRef": "SN"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "PAI"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).PAI",
+              "nativeQueryRef": "PAI"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "PSV"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).PSV",
+              "nativeQueryRef": "PSV"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "PK"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).PK",
+              "nativeQueryRef": "PK"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "PJ"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).PJ",
+              "nativeQueryRef": "PJ"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "AR"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).AR",
+              "nativeQueryRef": "AR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "MZ"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).MZ",
+              "nativeQueryRef": "MZ"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1) (2)"
+                    }
+                  },
+                  "Property": "RBT"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1) (2).RBT",
+              "nativeQueryRef": "RBT"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1) (2)"
+                    }
+                  },
+                  "Property": "SEJ"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1) (2).SEJ",
+              "nativeQueryRef": "SEJ"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                    }
+                  },
+                  "Property": "PM"
+                }
+              },
+              "queryRef": "PELAPORAN PBD (JULAI 2024) (Sheet1).PM",
+              "nativeQueryRef": "PM"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "PELAPORAN PBD (JULAI 2024) (Sheet1)"
+                  }
+                },
+                "Property": "NAMA"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "PELAPORAN PBD (JULAI 2024) (Sheet1).NAMA"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BoldHeader'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

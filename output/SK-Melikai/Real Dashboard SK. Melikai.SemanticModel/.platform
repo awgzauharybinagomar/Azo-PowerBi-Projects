@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Real Dashboard SK. Melikai"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "da37a6c4-46e9-4d47-a80d-a014a533e52d"
+  }
+}

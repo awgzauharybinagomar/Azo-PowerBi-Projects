@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Real Dashboard SK. Melikai"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "046d2cb8-f895-4df3-a887-beadb99c88bb"
+  }
+}

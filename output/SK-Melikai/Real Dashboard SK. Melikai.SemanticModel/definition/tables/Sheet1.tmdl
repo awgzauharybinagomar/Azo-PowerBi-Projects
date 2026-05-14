@@ -1,0 +1,152 @@
+table Sheet1
+	lineageTag: 4774e9f5-c1ab-42fb-a30d-f97fe7f03f91
+
+	column BIL
+		dataType: int64
+		formatString: 0
+		lineageTag: c6e1deda-609c-4ea1-8770-bb09999bbb84
+		summarizeBy: none
+		sourceColumn: BIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tahun
+		dataType: string
+		lineageTag: 86f01e18-df80-44fa-a8e7-600bdf17ccd8
+		summarizeBy: none
+		sourceColumn: Tahun
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kelas
+		dataType: string
+		lineageTag: f1c3638d-8e76-4c17-9f05-8b721a60493f
+		summarizeBy: none
+		sourceColumn: Kelas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. KP'
+		dataType: int64
+		lineageTag: 3df70d14-6e7e-4fc5-8e6e-d17f39873ba4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: No. KP
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'No. Sijil Lahir'
+		dataType: string
+		lineageTag: 68fb6fb6-2c36-4388-ba92-66f61d073cbb
+		summarizeBy: none
+		sourceColumn: No. Sijil Lahir
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nama
+		dataType: string
+		lineageTag: 5d7a6c36-2b2b-4296-b9f8-f6fb374b19b1
+		summarizeBy: none
+		sourceColumn: Nama
+
+		annotation SummarizationSetBy = Automatic
+
+	column Jantina
+		dataType: string
+		lineageTag: 0d6b6b96-c13e-4efe-9336-290e5b9b2ccf
+		summarizeBy: none
+		sourceColumn: Jantina
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kaum
+		dataType: string
+		lineageTag: 6b25f59a-d0e2-47bc-82b4-f433ed87d152
+		summarizeBy: none
+		sourceColumn: Kaum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Agama
+		dataType: string
+		lineageTag: 72221f80-cae7-43e2-8e65-54306d57f26c
+		summarizeBy: none
+		sourceColumn: Agama
+
+		annotation SummarizationSetBy = Automatic
+
+	column Warganegara
+		dataType: string
+		lineageTag: 9f98e1ce-cabf-4091-a892-fcfefea1661e
+		summarizeBy: none
+		sourceColumn: Warganegara
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tarikh Lahir'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 2ea614de-62a5-4146-a144-3a59c8bc0542
+		summarizeBy: none
+		sourceColumn: Tarikh Lahir
+
+		variation Variation
+			isDefault
+			relationship: e28bef53-f85b-45cc-a114-be23305a7776
+			defaultHierarchy: LocalDateTable_14efc27c-3a1d-459d-af31-acf8ce6f03da.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'No. KP Bapa'
+		dataType: string
+		lineageTag: a4bf7c35-559b-42ac-8d86-b6f2d7ec5ddd
+		summarizeBy: none
+		sourceColumn: No. KP Bapa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nama Bapa'
+		dataType: string
+		lineageTag: fbeb2895-b59c-47cf-af68-b504da4df37e
+		summarizeBy: none
+		sourceColumn: Nama Bapa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. KP Ibu'
+		dataType: string
+		lineageTag: 46b4148e-c245-48f1-812d-62a92e18f9ae
+		summarizeBy: none
+		sourceColumn: No. KP Ibu
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nama Ibu'
+		dataType: string
+		lineageTag: d4174f21-14ac-4771-8e59-84de19948f81
+		summarizeBy: none
+		sourceColumn: Nama Ibu
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sheet1 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\soulr\OneDrive\Documents\Senarai Murid Dan Maklumat Peribadi SK. Melikai.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"BIL", Int64.Type}, {"Tahun", type text}, {"Kelas", type text}, {"No. KP", Int64.Type}, {"No. Sijil Lahir", type text}, {"Nama", type text}, {"Jantina", type text}, {"Kaum", type text}, {"Agama", type text}, {"Warganegara", type text}, {"Tarikh Lahir", type date}, {"No. KP Bapa", type text}, {"Nama Bapa", type text}, {"No. KP Ibu", type text}, {"Nama Ibu", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

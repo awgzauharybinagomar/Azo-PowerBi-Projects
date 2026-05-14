@@ -1,0 +1,31 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-MY
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Sheet1","Sheet1 (2)","Sheet1 (3)","Sheet1 (4)","Sheet1 (5)","Sheet1 (6)","PELAPORAN PBD (JULAI 2024) (Sheet1)","Sheet1 (7)","PELAPORAN PBD (JULAI 2024) (Sheet1) (2)"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Sheet1
+ref table DateTableTemplate_a5088ea9-6cc0-47db-bc65-97de7807bbd8
+ref table LocalDateTable_14efc27c-3a1d-459d-af31-acf8ce6f03da
+ref table 'Sheet1 (2)'
+ref table LocalDateTable_90292097-669d-4610-8e0b-e30f3b24fbd4
+ref table 'Sheet1 (3)'
+ref table LocalDateTable_36706b4a-6445-4d45-859f-47b4accb2e29
+ref table 'Sheet1 (4)'
+ref table 'Sheet1 (5)'
+ref table LocalDateTable_6bb126ab-6d14-4ea7-918f-0af57e78a303
+ref table 'Sheet1 (6)'
+ref table 'PELAPORAN PBD (JULAI 2024) (Sheet1)'
+ref table 'Sheet1 (7)'
+ref table 'PELAPORAN PBD (JULAI 2024) (Sheet1) (2)'
+
+ref cultureInfo en-US
+

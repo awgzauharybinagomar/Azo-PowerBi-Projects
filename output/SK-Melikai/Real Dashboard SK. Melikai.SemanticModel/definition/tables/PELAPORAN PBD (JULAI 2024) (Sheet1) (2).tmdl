@@ -1,0 +1,139 @@
+table 'PELAPORAN PBD (JULAI 2024) (Sheet1) (2)'
+	lineageTag: 2ca22615-8eaa-41b3-94d0-fff556b62062
+
+	column 'BIL.'
+		dataType: int64
+		formatString: 0
+		lineageTag: 215bbe5b-938a-4e06-9e5a-6c21c209c3dc
+		summarizeBy: none
+		sourceColumn: BIL.
+
+		annotation SummarizationSetBy = Automatic
+
+	column KELAS
+		dataType: string
+		lineageTag: f33840a4-2769-4c83-a83e-f0a52b609504
+		summarizeBy: none
+		sourceColumn: KELAS
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAMA
+		dataType: string
+		lineageTag: 1e70e4ea-1f67-4e25-9e18-d689d2c49fa3
+		summarizeBy: none
+		sourceColumn: NAMA
+
+		annotation SummarizationSetBy = Automatic
+
+	column BM
+		dataType: string
+		lineageTag: 4815accb-51d4-46bc-8ecf-251627fe68f6
+		summarizeBy: none
+		sourceColumn: BM
+
+		annotation SummarizationSetBy = Automatic
+
+	column BI
+		dataType: string
+		lineageTag: fbc04d1a-08fa-495e-9c02-ddbbafb4c432
+		summarizeBy: none
+		sourceColumn: BI
+
+		annotation SummarizationSetBy = Automatic
+
+	column MT
+		dataType: string
+		lineageTag: 1bea5e7c-f40a-478d-8a0f-33ba2a34cbe1
+		summarizeBy: none
+		sourceColumn: MT
+
+		annotation SummarizationSetBy = Automatic
+
+	column SN
+		dataType: string
+		lineageTag: 859663b9-9f25-451c-aad1-f42e564e06c0
+		summarizeBy: none
+		sourceColumn: SN
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEJ
+		dataType: string
+		lineageTag: 8af90873-d82f-475d-8c5c-f66c6b57378b
+		summarizeBy: none
+		sourceColumn: SEJ
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAI
+		dataType: string
+		lineageTag: efe3e5c1-5f70-4965-8044-561a1e551ee2
+		summarizeBy: none
+		sourceColumn: PAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column RBT
+		dataType: string
+		lineageTag: f70a5663-931c-46e4-aa3b-8f1f7209989f
+		summarizeBy: none
+		sourceColumn: RBT
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR
+		dataType: string
+		lineageTag: 5045c132-464c-4d6a-97bf-4b6e0dec5b47
+		summarizeBy: none
+		sourceColumn: AR
+
+		annotation SummarizationSetBy = Automatic
+
+	column PJ
+		dataType: string
+		lineageTag: cd9de046-a95d-45ba-85e8-aca71dad7b8b
+		summarizeBy: none
+		sourceColumn: PJ
+
+		annotation SummarizationSetBy = Automatic
+
+	column PK
+		dataType: string
+		lineageTag: 62e7c884-2826-421a-a7f9-3343fd971bdb
+		summarizeBy: none
+		sourceColumn: PK
+
+		annotation SummarizationSetBy = Automatic
+
+	column MZ
+		dataType: string
+		lineageTag: df11dadb-0603-47bd-b2fe-d27ce67a4d27
+		summarizeBy: none
+		sourceColumn: MZ
+
+		annotation SummarizationSetBy = Automatic
+
+	column PSV
+		dataType: string
+		lineageTag: 410ebed1-60bc-49de-a8b6-e17ca913f1a1
+		summarizeBy: none
+		sourceColumn: PSV
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'PELAPORAN PBD (JULAI 2024) (Sheet1) (2)' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\soulr\OneDrive\Documents\POWER BI DOC\PBD JULAI 2024 TAHAP 2.xlsx"), null, false),
+				    Sheet1_sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+				    #"Removed Top Rows" = Table.Skip(Sheet1_sheet, each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"BIL.", Int64.Type}, {"KELAS", type text}, {"NAMA", type text}, {"BM", type text}, {"BI", type text}, {"MT", type text}, {"SN", type text}, {"SEJ", type text}, {"PAI", type text}, {"RBT", type text}, {"AR", type text}, {"PJ", type text}, {"PK", type text}, {"MZ", type text}, {"PSV", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
