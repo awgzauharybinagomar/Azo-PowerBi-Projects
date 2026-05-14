@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - claude/setup-powerbi-report-3eA7D
+      - claude/rename-website-iTIj8
     paths:
       - 'website/**'
       - '.github/workflows/pages.yml'
